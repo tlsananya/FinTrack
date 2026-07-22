@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FinTrack | 📊Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📊 Dashboard</h1>
+
+<div class="dashboard-grid">
+
+    <div class="card">
+        <h2>Total Expenses</h2>
+        <h3>Rs. {{ total }}</h3>
+    </div>
+
+    <div class="card">
+        <h2>Total Transactions</h2>
+        <h3>₹ {{ count }}</h3>
+    </div>
+
+    <div class="card">
+        <h2>Average Expenses</h2>
+        <h3>Rs. {{ average }}</h3>
+    </div>
+
+</div>
+
+<br>
+
+<a href="/" class="btn">🏠 Back To Home</a>
+
+</div>
+
+</body>
+</html>

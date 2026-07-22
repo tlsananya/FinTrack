@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FinTrack | 📜Expense History</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📜 Expense History</h1>
+
+<table>
+
+<tr>
+<th>Expense</th>
+<th>Amount</th>
+<th>Category</th>
+<th>Date</th>
+</tr>
+
+{% for expense in expenses %}
+
+<tr>
+
+<td>{{ expense[1] }}</td>
+<td>₹ {{ expense[2] }}</td>
+<td>{{ expense[3] }}</td>
+<td>{{ expense[4] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/" class="btn">🏠 Back To Home</a>
+
+</div>
+
+</body>
+</html>

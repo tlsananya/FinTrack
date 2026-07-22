@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewsport" content="width=device-width, initial-scale=1.0">
+    <title> FinTrack | ➕Add Expense</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+    <h1>Add Expense</h1>
+    <form method="POST">
+    <label>Expense Name:</label>
+    <input type="text" name="expense_name" required>
+    <label>Amount:</label>
+    <input type="number" name="amount" required>
+    <label>category:</label>
+    <select name="category">
+        <option>Food</option>
+        <option>Travel</option>
+        <option>Education</option>
+        <option>Entertaniment</option>
+        </select>
+        <label>Date:</label>
+        <input type="date" name="date" required>
+        <button type="submit">💾 Save Expense</button>
+    </form>
+    <a href="/" class="btn">🏠 Back To Home</a>
+    </div>
+</body>
+</html>
